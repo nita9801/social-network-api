@@ -1,15 +1,17 @@
-const Thought = require('../models/Thought');
-const User = require('../models/User');
+// Imports
+const { User, Thought } = require("../models");
+
+ // Get all thoughts
 
 module.exports = {
-  // Get all thoughts
-  getThoughts(req, res) {
+   getThoughts(req, res) {
     Thought.find()
       .then((thoughts) => res.json(thoughts))
       .catch((err) => res.status(500).json(err));
   },
 
   // Get a single thought by its ID
+
   getSingleThought(req, res) {
     Thought.findOne({ _id: req.params.thoughtId })
       .then((thought) =>
@@ -21,10 +23,12 @@ module.exports = {
   },
 
   // Create a new thought
+
   createThought(req, res) {
     Thought.create(req.body)
       .then((thought) => {
         // Push the thought's ID to the associated user's thoughts array
+
         return User.findOneAndUpdate(
           { _id: req.body.userId },
           { $push: { thoughts: thought._id } },
@@ -40,6 +44,7 @@ module.exports = {
   },
 
   // Update a thought by its ID
+
   updateThought(req, res) {
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
@@ -55,6 +60,7 @@ module.exports = {
   },
 
   // Delete a thought by its ID
+
   deleteThought(req, res) {
     Thought.findOneAndDelete({ _id: req.params.thoughtId })
       .then((thought) =>
@@ -75,6 +81,7 @@ module.exports = {
   },
 
   // Add a reaction to a thought
+
   addReaction(req, res) {
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
@@ -90,6 +97,7 @@ module.exports = {
   },
 
   // Remove a reaction from a thought
+
   removeReaction(req, res) {
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },

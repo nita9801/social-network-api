@@ -1,4 +1,9 @@
-import mongoose from 'mongoose';
+require('mongoose');
+const dotenv = require('dotenv');
+
+dotenv.config();
+
+// database creation
 
 const db = async () => {
     try {
@@ -11,4 +16,4 @@ const db = async () => {
     }
 }
 
-export default db;
+module.exports = db;

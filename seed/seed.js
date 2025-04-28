@@ -1,7 +1,8 @@
-const mongoose = require('mongoose');
+// Imports
+const { User, Thought, Reaction } = require("../models");
+const mongoose = require("mongoose");
+const db = require('../config/connection');
 const dotenv = require('dotenv');
-const User = require('../models/User');
-const Thought = require('../models/Thought');
 
 dotenv.config();
 
@@ -74,6 +75,11 @@ const seedDatabase = async () => {
       });
     }
 
+  // Drop existing students
+  await User.deleteMany({});
+
+  // Adds seed data to database
+  await User.collection.insertMany(users);
     console.log('Database seeded successfully!');
     process.exit(0);
   } catch (err) {

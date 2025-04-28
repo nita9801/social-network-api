@@ -1,4 +1,7 @@
+// Imports
 const router = require('express').Router();
+
+// imports functions that are written in the thoughcontroller file
 const {
   getThoughts,
   getSingleThought,
@@ -12,6 +15,7 @@ const {
 // Routes for thoughts
 router.route('/').get(getThoughts).post(createThought);
 
+// route for thoughtId
 router
   .route('/:thoughtId')
   .get(getSingleThought)
@@ -26,5 +30,5 @@ router
 router
   .route('/:thoughtId/reactions/:reactionId')
   .delete(removeReaction);
-
+// exports
 module.exports = router;
