@@ -3,6 +3,10 @@ const { Schema, model } = require('mongoose');
 // user schema
 const userSchema = new Schema(
   {
+    userId: {
+      type: String,
+      default: () => new Date().getTime().toString(), // Example: Generate a unique string
+    },
     username: {
       type: String,
       unique: true,
@@ -41,8 +45,6 @@ userSchema.virtual('friendCount').get(function () {
   return this.friends.length;
 });
 
-// cretate user model with user schema
-const User = model('User', userSchema);
-
 // export
+const User = model('User', userSchema);
 module.exports = User;

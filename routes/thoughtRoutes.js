@@ -23,12 +23,7 @@ router
   .delete(deleteThought);
 
 // Routes for reactions
-router
-  .route('/:thoughtId/reactions')
-  .post(addReaction);
-
-router
-  .route('/:thoughtId/reactions/:reactionId')
-  .delete(removeReaction);
+router.route('/:thoughtId/reactions').post(addReaction);
+router.route('/:thoughtId/reactions/:reactionId').delete(removeReaction);
 // exports
 module.exports = router;
