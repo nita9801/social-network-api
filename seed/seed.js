@@ -88,17 +88,4 @@ const seedDatabase = async () => {
   }
 };
 
-db.once('open', async () => {
-  try {
-    await User.deleteMany({});
-    const user = await User.create({ username: 'testuser', email: 'test@example.com' });
-    console.log(user.userId); // Custom userId
-    console.log(user._id);    // Default MongoDB _id
-    process.exit(0);
-  } catch (err) {
-    console.error(err);
-    process.exit(1);
-  }
-});
-
 seedDatabase();
