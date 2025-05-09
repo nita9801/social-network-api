@@ -1,17 +1,16 @@
-# Social Network API
-
-## Description
-
-The Social Network API is a backend application built using Node.js, Express.js, and MongoDB. It provides RESTful API endpoints for managing users, thoughts, reactions, and friendships in a social network application.
+<a id="readme-top"></a>
+<h3 align="center">Social Media API</h3>
 
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
 - [Walkthrough](#walkthrough)
-- [Screenshot](#screenshot)
 - [License](#license)
 - [Contributors and Questions](#contributors-and-questions)
+
+## Description
+The Social Network API is a backend application built using Node.js, Express.js, and MongoDB. It provides RESTful API endpoints for managing users, thoughts, reactions, and friendships in a social network application.
 
 ## Installation
 1. Clone the repository to your machine:
@@ -34,10 +33,16 @@ The Social Network API is a backend application built using Node.js, Express.js,
    npm start
    ```
 
+
+   ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- Usage -->
+
 ## Usage
 Once the server is running, use Insomnia to interact with the following routes:
+<!-- LICENSE -->
 
-### User Routes
+## User Routes
 - `GET /api/users` – Get all users
 - `GET /api/users/:userId` – Get a user by ID
 - `POST /api/users` – Create a new user
@@ -46,14 +51,14 @@ Once the server is running, use Insomnia to interact with the following routes:
 - `POST /api/users/:userId/friends/:friendId` – Add a friend
 - `DELETE /api/users/:userId/friends/:friendId` – Remove a friend
 
-### Thought Routes
+## Thought Routes
 - `GET /api/thoughts` – Get all thoughts
 - `GET /api/thoughts/:thoughtId` – Get a thought by ID
 - `POST /api/thoughts` – Create a thought and associate it with a user
 - `PUT /api/thoughts/:thoughtId` – Update a thought
 - `DELETE /api/thoughts/:thoughtId` – Delete a thought
 
-### Reaction Routes
+## Reaction Routes
 - `POST /api/thoughts/:thoughtId/reactions` – Add a reaction
 - `DELETE /api/thoughts/:thoughtId/reactions/:reactionId` – Remove a reaction
 
@@ -68,15 +73,13 @@ Once the server is running, use Insomnia to interact with the following routes:
 
 ## Walkthrough
 A full walkthrough video demonstrating all functionality can be found here:  
-The video includes: (enter when video is ready)
+The video includes: (was unable to do a video)
 - Starting the server
 - Testing all GET, POST, PUT, DELETE routes for users, thoughts, reactions, and friends using Insomnia
 
 The video includes:
 - Starting the server
 - Testing all GET, POST, PUT, DELETE routes for users, thoughts, reactions, and friends using Insomnia
-
-## Screenshot
 
 ## License
 This project is licensed under the MIT License.
@@ -89,3 +92,9 @@ for any questions, comments or suggestions reach out as follows.
 **Email**: [gmail](nita9801@gmail.com)
 
 **github**: [nita9801](https://github.com/nita9801/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+ 
+
