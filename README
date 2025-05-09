@@ -68,7 +68,7 @@ Once the server is running, use Insomnia to interact with the following routes:
 
 ## Walkthrough
 A full walkthrough video demonstrating all functionality can be found here:  
-The video includes:
+The video includes: (enter when video is ready)
 - Starting the server
 - Testing all GET, POST, PUT, DELETE routes for users, thoughts, reactions, and friends using Insomnia
 
@@ -82,6 +82,10 @@ The video includes:
 This project is licensed under the MIT License.
 
 ## Contributors and Questions
+for any questions, comments or suggestions reach out as follows.
+
  Created by: Christine L 
+
 **Email**: [gmail](nita9801@gmail.com)
+
 **github**: [nita9801](https://github.com/nita9801/)
